@@ -1,0 +1,45 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  min-height: 50rem;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 18%;
+
+  background-color: var(--color-grey-dark-1);
+}
+
+.hotel-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  background-color: orange;
+  height: 80rem;
+}
+
+.hotel-heading {
+  display: flex;
+  justify-content: space-around;
+}
