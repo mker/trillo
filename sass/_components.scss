@@ -69,7 +69,6 @@
   & > * {
     display: flex;
     align-items: center;
-
     height: 100%;
     padding: 0 2rem;
     cursor: pointer;
@@ -94,7 +93,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     top: 1.3rem;
     right: 1.2rem;
     font-size: 0.8rem;
@@ -150,7 +148,7 @@
   }
 
   &__item:active::before {
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary-dark);
   }
 
   &__link:link,
@@ -158,7 +156,6 @@
     display: flex;
     align-items: center;
     position: relative;
-
     color: var(--color-grey-light-1);
     text-decoration: none;
     text-transform: uppercase;
@@ -174,8 +171,8 @@
   }
 }
 
-//////
-// OTHER
+////////////////
+// LEGAL TEXT
 
 .legal {
   font-size: 1.2rem;
@@ -184,6 +181,9 @@
   padding: 2.5rem;
 }
 
+////////////////
+// MAIN CONTENT
+
 .gallery {
   display: flex;
 
@@ -191,4 +191,124 @@
     display: block;
     width: 100%;
   }
+}
+
+////////////////
+// HOTEL OVERVIEW
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: var(--line);
+  background-color: #fff;
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-primary);
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 0 2.5rem;
+    margin-left: 2.5rem;
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  &__rating-average {
+    font-size: 2.3rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+  }
+}
+
+////////////////
+// BUTTON INLINE & ANIMATION
+
+.btn-inline {
+  display: inline-block;
+  font-size: inherit;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 1px solid currentColor; // same color as text
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  animation-play-state: paused;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+    animation: pulsate 1.2s ease-in-out infinite;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0.75rem 2rem rgba(#000000, $alpha: 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+////////////////
+// HOTEL DETAIL
+
+.detail {
+  display: flex;
+  flex-direction: row;
+
+  padding: 4.5rem;
+}
+
+.description {
+  flex: 0 0 60%;
 }
