@@ -12,6 +12,12 @@
   justify-content: center;
   flex: 0 0 40%;
 
+  @media screen and (max-width: $bp-smallest) {
+    order: 1; // make last component in parent flexbox
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -179,6 +185,11 @@
       justify-content: center;
       padding: 2rem;
     }
+
+    @media screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
   }
 
   &__icon {
@@ -186,6 +197,13 @@
     width: 2rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media screen and (max-width: $bp-small) {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -230,6 +248,11 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 1.5rem 3rem;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__stars {
@@ -264,17 +287,29 @@
     margin-left: 2.5rem;
     background-color: var(--color-primary);
     color: #fff;
+
+    @media screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 0.6rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.3rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -354,9 +389,6 @@
     height: 1rem;
     width: 1rem;
     margin-right: 0.7rem;
-
-    // background-image: url(../img/chevron-thin-right.svg);
-    // background-size: cover;
 
     background-color: var(--color-primary);
     mask-image: url(../img/chevron-thin-right.svg);
